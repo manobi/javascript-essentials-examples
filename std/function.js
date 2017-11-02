@@ -26,6 +26,20 @@ let adder = new Function('a', 'b', 'return a + b');
 console.log( adder(1, 1) );
 
 /*
+* ## Properties
+*/
+
+/*
+* name
+*/
+console.log(calculate.name);
+
+/*
+* arguments
+*/
+console.log('calculate arguments', calculate.length);
+
+/*
 * ## Methods
 */
 
@@ -35,8 +49,8 @@ let person = {
   destroyDeathStar: function(){
     console.log('BOOOOOM!!!');
   },
-  hasTheForce: function(){
-    console.log('The force is strong in my family');
+  isJedi: function(){
+    console.log('Like his father before him');
   }
 };
 
@@ -52,3 +66,8 @@ for (key in person) {
 /*
 * ### Apply
 */
+for (key in person) {
+  if (typeof person[key] === 'function') {
+    person[key].apply();
+  };
+}

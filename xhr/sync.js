@@ -5,9 +5,16 @@ var bt = document.querySelector('button');
 bt.onclick = function(){
   alert('ok');
 }
+
+/*
+* Get panel elements
+*/
 var panel1 = document.getElementById('panel-1');
 var panel2 = document.getElementById('panel-2');
 
+/*
+* Start REQUEST 1
+*/
 console.time('loading');
 var req = new XMLHttpRequest();
 req.open('GET', 'large-file.html', false);
@@ -18,7 +25,9 @@ req.onreadystatechange = function() {
 }
 req.send();
 
-
+/*
+* Start REQUEST 2
+*/
 var req2 = new XMLHttpRequest();
 req2.open('GET', 'small-file.html', false);
 req2.onreadystatechange = function() {

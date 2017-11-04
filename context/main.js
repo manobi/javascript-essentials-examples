@@ -1,21 +1,27 @@
 /*
-* ## This
+* # Context
 */
-var anakin   = {};
-let quiGon   = {};
-const obiWan = {};
-jocastaNu    = {};
 
 /*
 * ### Global
 */
-console.log(this);
+var quiGon = {};
+obiWan = {};
+//console.log('Qui-Gon', quiGon);
+//console.log('Obi-Wan', obiWan);
 
-var yoda = {
-  height: 0.7,
-  color: 'green',
-  age: 896
-};
+if (true) {
+  var jocastaNu = {};
+  jocastaNu.age = 80;
+}
+console.log(jocastaNu);
+//console.log(global.obiWan);
 
-console.log(yoda);
-console.log(this.yoda);
+/*
+* ### Local
+*/
+function createMaster(){
+  var kiAdiMundi = {};
+}
+createMaster();
+//console.log(kiAdiMundi);

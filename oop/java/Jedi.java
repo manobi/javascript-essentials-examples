@@ -14,9 +14,11 @@ public class Jedi {
     public void igniteLightSaber (){
       System.out.println(this.name + " igniting: BZIUMMMMMM");
     }
+
     public void powerOffLightSaber (){
       System.out.println(this.name + " turning off: Kuakkkk");
     }
+    
     public void swingLightSaber (){
       System.out.println("Vreun Vren Vrun");
     }

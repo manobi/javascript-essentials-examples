@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      .panel {
+        border: 1px solid red
+      }
+      .container {
+        display: flex
+      }
+      .container > * {
+        flex: 0 0 50%;
+        height: 100vh
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>AJAX SYNC</title>
+  </head>
+  <body>
+    <h1>My Application</h1>
+    <button type="button" name="button">Show message</button>
+    <div class="container">
+      <div id="panel-1" class="panel">Not started</div>
+      <div id="panel-2" class="panel"></div>
+    <div>
+
+  </body>
+  <script type="text/javascript" src="async.js"></script>
+</html>

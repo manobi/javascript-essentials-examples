@@ -5,15 +5,11 @@ var bt = document.querySelector('button');
 bt.onclick = function(){
   alert('ok');
 }
-
-/*
-* Get panel elements
-*/
 var panel1 = document.getElementById('panel-1');
 var panel2 = document.getElementById('panel-2');
 
 /*
-* Start REQUEST 1
+* REQUEST 1
 */
 console.time('loading');
 var req = new XMLHttpRequest();
@@ -26,7 +22,7 @@ req.onreadystatechange = function() {
 req.send();
 
 /*
-* Start REQUEST 2
+* REQUEST 2
 */
 var req2 = new XMLHttpRequest();
 req2.open('GET', 'small-file.html', true);
@@ -37,5 +33,9 @@ req2.onreadystatechange = function() {
 }
 req2.send();
 
-console.log('Requisições feitas');
-console.timeEnd('loading');
+/*
+* Add Message
+*/
+var msg = document.createElement('h3');
+msg.innerHTML = 'Welcome to my website';
+document.querySelector('.msg').appendChild( msg );

@@ -14,7 +14,7 @@ if (true) {
   var jocastaNu = {};
   jocastaNu.age = 80;
 }
-console.log(jocastaNu);
+//console.log(jocastaNu);
 //console.log(global.obiWan);
 
 /*

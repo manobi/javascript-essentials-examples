@@ -1,6 +1,3 @@
-/*
-* Add Event to button
-*/
 var bt = document.querySelector('button');
 bt.onclick = function(){
   alert('ok');

@@ -1,12 +1,9 @@
-/*
-* Add Event to button
-*/
-var bt = document.querySelector('button');
+var panel1 = document.getElementById('panel-1');
+var panel2 = document.getElementById('panel-2');
+var bt     = document.querySelector('button');
 bt.onclick = function(){
   alert('ok');
 }
-var panel1 = document.getElementById('panel-1');
-var panel2 = document.getElementById('panel-2');
 
 /*
 * REQUEST 1

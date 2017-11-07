@@ -84,9 +84,9 @@ for (key in person) {
 */
 function pGify(text, callback) {
   let str = text.split(' ');
-  show(str.join(' p'));
+  let result = str.join(' p');
+  callback(result);
 }
-
 
 function show(msg){
   //https://coderwall.com/p/yphywg/printing-colorful-text-in-terminal-when-run-node-js-script

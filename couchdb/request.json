@@ -1,0 +1,4 @@
+{
+    "map": "function(doc) { if (doc.value) { emit(doc.value, null); } }",
+    "reduce": "_count"
+}

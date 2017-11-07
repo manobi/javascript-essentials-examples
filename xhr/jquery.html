@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+      }
+      .panel {
+        border: 1px solid red
+      }
+      .container {
+        display: flex
+      }
+      .container > * {
+        flex: 0 0 50%;
+        height: 100vh
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>AJAX SYNC</title>
+  </head>
+  <body>
+    <h1>My Application</h1>
+    <div class="msg"></div>
+    <button type="button" name="button">Show OK</button>
+    <div class="container">
+      <div id="panel-1" class="panel">Not started</div>
+      <div id="panel-2" class="panel"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+  </body>
+
+</html>

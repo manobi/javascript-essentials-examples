@@ -4,24 +4,29 @@
 var jocasta = {name: 'Jocasta Nu'};
 //console.log(jocasta);
 
+
+var padawans = undefined;
 function temple(){
-  var padawans = 20;
+  var padawan = 20;
   guards = 8;
 }
 temple();
-//console.log(padawans);
+//console.log(padawan);
 //console.log(guards);
 //console.log(global);
+
+
+
 
 if (true) {
   var mace = 'Windu';
 }
 //console.log(mace);
 
+
 // overwrite
 var jocasta = 10;
 //console.log(jocasta);
-
 
 
 
@@ -66,18 +71,33 @@ function run(first, second){
 let jedi = {
   name: 'Ki-Adi-Mundi',
   run: function(first, second){
-    console.log(this);
+    console.log(jedi.name);
   }
 }
-//jedi.run();
+// jedi.run()
+
 
 /*
 * ### Explicit Binding
 */
 let skate = {
+  name: 'Manobi',
   deck: 'Element',
   truck: 'Independent',
   bearing: 'Bones'
 }
-//run.call(skate, 1, 2);
+
+let wilson = {
+  name: 'Wilson',
+  deck: 'Element',
+  truck: 'Independent',
+  bearing: 'Bones'
+}
+
+function run(first, second){
+  console.log(second);
+  //console.log(this.name);
+}
+
+//run.call(wilson, 20, 30);
 //run.apply(skate, [1, 2]);

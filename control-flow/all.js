@@ -15,11 +15,7 @@ function createJavascript() {
     });
   });
 }
-function javascriptHandler(err) {
-  if (!err) {
-    console.log('A pasta "javascript" foi criada');
-  }
-}
+
 function createEssentials() {
   return new Promise((resolve, reject) => {
     fs.mkdir('javascript/essentials', (err) => {
@@ -28,11 +24,7 @@ function createEssentials() {
     });
   });
 }
-function essentialsHandler(err){
-  if (!err) {
-    console.log('A pasta "essentials" foi criada');
-  }
-}
+
 function createOop(){
   return new Promise((resolve, reject) => {
     fs.mkdir('javascript/essentials/oop', (err) => {
@@ -40,13 +32,8 @@ function createOop(){
       reject(err);
     });
   });
+}
 
-}
-function oopHandler(err){
-  if (!err) {
-    console.log('A pasta "oop" foi criada');
-  }
-}
 function createContext(){
   return new Promise((resolve, reject) => {
     fs.mkdir('javascript/essentials/context', (err) => {
@@ -55,11 +42,7 @@ function createContext(){
     });
   });
 }
-function contextHandler(err){
-  if (!err) {
-    console.log('A pasta "context" foi criada');
-  }
-}
+
 function fim(){
   console.log('Todas as pastas foram criadas');
 }
@@ -67,14 +50,15 @@ function fim(){
 async function run(){
   let js         = await createJavascript();
   let essentials = await createEssentials();
-  let oop        = await createOop();
-  let context    = await createContext();
-
-  if(js && essentials && oop && context){
+  let parallels = Promise.all([
+    createOop(),
+    createContext()
+  ]);
+  if(js && essentials && parallels){
     console.log('Todas as pastas foram cridas');
   }
 }
-run();
+run().catch(err => console.log(err));
 
 // Roda imediatamente
 function deBoa(){
